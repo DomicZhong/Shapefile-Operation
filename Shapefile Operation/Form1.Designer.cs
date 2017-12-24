@@ -33,6 +33,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shapefileOperationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,14 +46,23 @@
             this.createPloygonShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savePloygonShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapOptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.measurementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomToExtentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.measurementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.printMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.projectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.geographyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.worldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.beijing1954ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.projectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.worldToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attributeTableOperationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAttributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addAColumnInTheAttributeTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,24 +70,18 @@
             this.updateAttributeTableInShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAttributeTableToExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAttribute = new System.Windows.Forms.Panel();
+            this.spatialStatusStrip1 = new DotSpatial.Controls.SpatialStatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgvAttributeTable = new System.Windows.Forms.DataGridView();
             this.pnlLengend = new System.Windows.Forms.Panel();
             this.legend1 = new DotSpatial.Controls.Legend();
             this.pnlMap = new System.Windows.Forms.Panel();
             this.map1 = new DotSpatial.Controls.Map();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.projectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.geographyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.worldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.worldToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.beijing1954ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spatialToolStrip1 = new DotSpatial.Controls.SpatialToolStrip();
             this.pnlOperations.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pnlAttribute.SuspendLayout();
+            this.spatialStatusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttributeTable)).BeginInit();
             this.pnlLengend.SuspendLayout();
             this.pnlMap.SuspendLayout();
@@ -130,6 +134,11 @@
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(103, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -233,26 +242,19 @@
             this.mapOptionToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
             this.mapOptionToolStripMenuItem.Text = "Map Option";
             // 
+            // panToolStripMenuItem
+            // 
+            this.panToolStripMenuItem.Name = "panToolStripMenuItem";
+            this.panToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.panToolStripMenuItem.Text = "Pan";
+            this.panToolStripMenuItem.Click += new System.EventHandler(this.panToolStripMenuItem_Click);
+            // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
             this.defaultToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.defaultToolStripMenuItem.Text = "Select";
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
-            // 
-            // informationToolStripMenuItem
-            // 
-            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.informationToolStripMenuItem.Text = "Information";
-            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
-            // 
-            // measurementToolStripMenuItem
-            // 
-            this.measurementToolStripMenuItem.Name = "measurementToolStripMenuItem";
-            this.measurementToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.measurementToolStripMenuItem.Text = "Measurement";
-            this.measurementToolStripMenuItem.Click += new System.EventHandler(this.measurementToolStripMenuItem_Click);
             // 
             // zoomInToolStripMenuItem
             // 
@@ -268,6 +270,13 @@
             this.zoomOutToolStripMenuItem.Text = "Zoom Out";
             this.zoomOutToolStripMenuItem.Click += new System.EventHandler(this.zoomOutToolStripMenuItem_Click);
             // 
+            // informationToolStripMenuItem
+            // 
+            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.informationToolStripMenuItem.Text = "Information";
+            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
+            // 
             // zoomToExtentToolStripMenuItem
             // 
             this.zoomToExtentToolStripMenuItem.Name = "zoomToExtentToolStripMenuItem";
@@ -275,12 +284,17 @@
             this.zoomToExtentToolStripMenuItem.Text = "Zoom to Extent";
             this.zoomToExtentToolStripMenuItem.Click += new System.EventHandler(this.zoomToExtentToolStripMenuItem_Click);
             // 
-            // panToolStripMenuItem
+            // measurementToolStripMenuItem
             // 
-            this.panToolStripMenuItem.Name = "panToolStripMenuItem";
-            this.panToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.panToolStripMenuItem.Text = "Pan";
-            this.panToolStripMenuItem.Click += new System.EventHandler(this.panToolStripMenuItem_Click);
+            this.measurementToolStripMenuItem.Name = "measurementToolStripMenuItem";
+            this.measurementToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.measurementToolStripMenuItem.Text = "Measurement";
+            this.measurementToolStripMenuItem.Click += new System.EventHandler(this.measurementToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(162, 6);
             // 
             // printMapToolStripMenuItem
             // 
@@ -288,6 +302,69 @@
             this.printMapToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.printMapToolStripMenuItem.Text = "Print Map";
             this.printMapToolStripMenuItem.Click += new System.EventHandler(this.printMapToolStripMenuItem_Click);
+            // 
+            // projectionToolStripMenuItem
+            // 
+            this.projectionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geographyToolStripMenuItem,
+            this.projectedToolStripMenuItem});
+            this.projectionToolStripMenuItem.Name = "projectionToolStripMenuItem";
+            this.projectionToolStripMenuItem.Size = new System.Drawing.Size(78, 21);
+            this.projectionToolStripMenuItem.Text = "Projection";
+            // 
+            // geographyToolStripMenuItem
+            // 
+            this.geographyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.worldToolStripMenuItem,
+            this.asiaToolStripMenuItem});
+            this.geographyToolStripMenuItem.Name = "geographyToolStripMenuItem";
+            this.geographyToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.geographyToolStripMenuItem.Text = "Geographic";
+            // 
+            // worldToolStripMenuItem
+            // 
+            this.worldToolStripMenuItem.Name = "worldToolStripMenuItem";
+            this.worldToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.worldToolStripMenuItem.Text = "World";
+            this.worldToolStripMenuItem.Click += new System.EventHandler(this.worldToolStripMenuItem_Click);
+            // 
+            // asiaToolStripMenuItem
+            // 
+            this.asiaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.beijing1954ToolStripMenuItem});
+            this.asiaToolStripMenuItem.Name = "asiaToolStripMenuItem";
+            this.asiaToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.asiaToolStripMenuItem.Text = "Asia";
+            // 
+            // beijing1954ToolStripMenuItem
+            // 
+            this.beijing1954ToolStripMenuItem.Name = "beijing1954ToolStripMenuItem";
+            this.beijing1954ToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.beijing1954ToolStripMenuItem.Text = "Beijing 1954";
+            this.beijing1954ToolStripMenuItem.Click += new System.EventHandler(this.beijing1954ToolStripMenuItem_Click);
+            // 
+            // projectedToolStripMenuItem
+            // 
+            this.projectedToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.worldToolStripMenuItem1,
+            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem});
+            this.projectedToolStripMenuItem.Name = "projectedToolStripMenuItem";
+            this.projectedToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.projectedToolStripMenuItem.Text = "Projected";
+            // 
+            // worldToolStripMenuItem1
+            // 
+            this.worldToolStripMenuItem1.Name = "worldToolStripMenuItem1";
+            this.worldToolStripMenuItem1.Size = new System.Drawing.Size(278, 22);
+            this.worldToolStripMenuItem1.Text = "World Mecator";
+            this.worldToolStripMenuItem1.Click += new System.EventHandler(this.worldToolStripMenuItem1_Click);
+            // 
+            // asiaNorthAlbersEqualAreaConicToolStripMenuItem
+            // 
+            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Name = "asiaNorthAlbersEqualAreaConicToolStripMenuItem";
+            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Text = "Asia North Albers EqualArea Conic";
+            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Click += new System.EventHandler(this.asiaNorthAlbersEqualAreaConicToolStripMenuItem_Click);
             // 
             // attributeTableOperationsToolStripMenuItem
             // 
@@ -338,12 +415,31 @@
             // 
             // pnlAttribute
             // 
+            this.pnlAttribute.Controls.Add(this.spatialStatusStrip1);
             this.pnlAttribute.Controls.Add(this.dgvAttributeTable);
             this.pnlAttribute.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlAttribute.Location = new System.Drawing.Point(0, 420);
             this.pnlAttribute.Name = "pnlAttribute";
             this.pnlAttribute.Size = new System.Drawing.Size(862, 100);
             this.pnlAttribute.TabIndex = 1;
+            // 
+            // spatialStatusStrip1
+            // 
+            this.spatialStatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.spatialStatusStrip1.Location = new System.Drawing.Point(0, 78);
+            this.spatialStatusStrip1.Name = "spatialStatusStrip1";
+            this.spatialStatusStrip1.ProgressBar = null;
+            this.spatialStatusStrip1.ProgressLabel = this.toolStripStatusLabel1;
+            this.spatialStatusStrip1.Size = new System.Drawing.Size(862, 22);
+            this.spatialStatusStrip1.TabIndex = 1;
+            this.spatialStatusStrip1.Text = "spatialStatusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(119, 17);
+            this.toolStripStatusLabel1.Text = "Longitude, Latitude";
             // 
             // dgvAttributeTable
             // 
@@ -358,14 +454,14 @@
             // pnlLengend
             // 
             this.pnlLengend.Controls.Add(this.legend1);
-            this.pnlLengend.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLengend.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnlLengend.Location = new System.Drawing.Point(0, 32);
+            this.pnlLengend.Location = new System.Drawing.Point(0, 60);
             this.pnlLengend.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.pnlLengend.Name = "pnlLengend";
             this.pnlLengend.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.pnlLengend.Size = new System.Drawing.Size(160, 388);
             this.pnlLengend.TabIndex = 2;
+            this.pnlLengend.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLengend_Paint);
             // 
             // legend1
             // 
@@ -391,8 +487,7 @@
             // pnlMap
             // 
             this.pnlMap.Controls.Add(this.map1);
-            this.pnlMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMap.Location = new System.Drawing.Point(160, 32);
+            this.pnlMap.Location = new System.Drawing.Point(160, 60);
             this.pnlMap.Margin = new System.Windows.Forms.Padding(3, 20, 25, 3);
             this.pnlMap.Name = "pnlMap";
             this.pnlMap.Size = new System.Drawing.Size(702, 388);
@@ -421,85 +516,24 @@
             this.map1.Size = new System.Drawing.Size(702, 388);
             this.map1.TabIndex = 0;
             this.map1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.map1_MouseDown);
+            this.map1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.map1_MouseMove);
             // 
-            // toolStripSeparator1
+            // spatialToolStrip1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(162, 6);
-            // 
-            // projectionToolStripMenuItem
-            // 
-            this.projectionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.geographyToolStripMenuItem,
-            this.projectedToolStripMenuItem});
-            this.projectionToolStripMenuItem.Name = "projectionToolStripMenuItem";
-            this.projectionToolStripMenuItem.Size = new System.Drawing.Size(78, 21);
-            this.projectionToolStripMenuItem.Text = "Projection";
-            // 
-            // geographyToolStripMenuItem
-            // 
-            this.geographyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.worldToolStripMenuItem,
-            this.asiaToolStripMenuItem});
-            this.geographyToolStripMenuItem.Name = "geographyToolStripMenuItem";
-            this.geographyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.geographyToolStripMenuItem.Text = "Geographic";
-            // 
-            // worldToolStripMenuItem
-            // 
-            this.worldToolStripMenuItem.Name = "worldToolStripMenuItem";
-            this.worldToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.worldToolStripMenuItem.Text = "World";
-            this.worldToolStripMenuItem.Click += new System.EventHandler(this.worldToolStripMenuItem_Click);
-            // 
-            // asiaToolStripMenuItem
-            // 
-            this.asiaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.beijing1954ToolStripMenuItem});
-            this.asiaToolStripMenuItem.Name = "asiaToolStripMenuItem";
-            this.asiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.asiaToolStripMenuItem.Text = "Asia";
-            // 
-            // projectedToolStripMenuItem
-            // 
-            this.projectedToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.worldToolStripMenuItem1,
-            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem});
-            this.projectedToolStripMenuItem.Name = "projectedToolStripMenuItem";
-            this.projectedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.projectedToolStripMenuItem.Text = "Projected";
-            // 
-            // worldToolStripMenuItem1
-            // 
-            this.worldToolStripMenuItem1.Name = "worldToolStripMenuItem1";
-            this.worldToolStripMenuItem1.Size = new System.Drawing.Size(278, 22);
-            this.worldToolStripMenuItem1.Text = "World Mecator";
-            this.worldToolStripMenuItem1.Click += new System.EventHandler(this.worldToolStripMenuItem1_Click);
-            // 
-            // asiaNorthAlbersEqualAreaConicToolStripMenuItem
-            // 
-            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Name = "asiaNorthAlbersEqualAreaConicToolStripMenuItem";
-            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
-            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Text = "Asia North Albers EqualArea Conic";
-            this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Click += new System.EventHandler(this.asiaNorthAlbersEqualAreaConicToolStripMenuItem_Click);
-            // 
-            // beijing1954ToolStripMenuItem
-            // 
-            this.beijing1954ToolStripMenuItem.Name = "beijing1954ToolStripMenuItem";
-            this.beijing1954ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.beijing1954ToolStripMenuItem.Text = "Beijing 1954";
-            this.beijing1954ToolStripMenuItem.Click += new System.EventHandler(this.beijing1954ToolStripMenuItem_Click);
+            this.spatialToolStrip1.ApplicationManager = null;
+            this.spatialToolStrip1.Location = new System.Drawing.Point(0, 32);
+            this.spatialToolStrip1.Map = this.map1;
+            this.spatialToolStrip1.Name = "spatialToolStrip1";
+            this.spatialToolStrip1.Size = new System.Drawing.Size(862, 25);
+            this.spatialToolStrip1.TabIndex = 4;
+            this.spatialToolStrip1.Text = "spatialToolStrip1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 520);
+            this.Controls.Add(this.spatialToolStrip1);
             this.Controls.Add(this.pnlMap);
             this.Controls.Add(this.pnlLengend);
             this.Controls.Add(this.pnlAttribute);
@@ -507,15 +541,20 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlOperations.ResumeLayout(false);
             this.pnlOperations.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlAttribute.ResumeLayout(false);
+            this.pnlAttribute.PerformLayout();
+            this.spatialStatusStrip1.ResumeLayout(false);
+            this.spatialStatusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttributeTable)).EndInit();
             this.pnlLengend.ResumeLayout(false);
             this.pnlMap.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -569,6 +608,9 @@
         private System.Windows.Forms.ToolStripMenuItem worldToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem asiaNorthAlbersEqualAreaConicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem beijing1954ToolStripMenuItem;
+        private DotSpatial.Controls.SpatialToolStrip spatialToolStrip1;
+        private DotSpatial.Controls.SpatialStatusStrip spatialStatusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

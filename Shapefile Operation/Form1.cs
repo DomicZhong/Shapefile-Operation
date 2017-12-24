@@ -663,5 +663,20 @@ namespace Shapefile_Operation
             map1.Projection = KnownCoordinateSystems.Geographic.Asia.Beijing1954;
         }
 
+        private void pnlLengend_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void map1_MouseMove(object sender,MouseEventArgs e)
+        {
+            GeoMouseArgs g = new GeoMouseArgs(e,map1);
+            toolStripStatusLabel1.Text = "X:" + g.GeographicLocation.X+ ",Y:" + g.GeographicLocation.Y;
+        }
     }
 }

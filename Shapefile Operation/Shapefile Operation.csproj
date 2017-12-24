@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotSpatial.Analysis">
+      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Analysis.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Compatibility">
+      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Compatibility.dll</HintPath>
+    </Reference>
     <Reference Include="DotSpatial.Controls">
       <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Controls.dll</HintPath>
     </Reference>
