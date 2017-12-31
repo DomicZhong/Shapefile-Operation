@@ -34,42 +34,42 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotSpatial.Analysis">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Analysis.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Analysis.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Compatibility">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Compatibility.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Compatibility.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Controls">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Controls.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Controls.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Data">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Data.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Data.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Data.Forms">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Data.Forms.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Data.Forms.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Plugins.MapWindowProjectFileCompatibility">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\Windows Extensions\DotSpatial.Plugins.MapWindowProjectFileCompatibility\DotSpatial.Plugins.MapWindowProjectFileCompatibility.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\Windows Extensions\DotSpatial.Plugins.MapWindowProjectFileCompatibility\DotSpatial.Plugins.MapWindowProjectFileCompatibility.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Projections">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Projections.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Projections.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Projections.Forms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=52099474f11b7ff0, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Projections.Forms.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Projections.Forms.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Serialization, Version=1.7.0.0, Culture=neutral, PublicKeyToken=441f200f827611e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Serialization.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Symbology">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Symbology.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Symbology.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Tools">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\Tools\DotSpatial.Tools.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\Tools\DotSpatial.Tools.dll</HintPath>
     </Reference>
     <Reference Include="DotSpatial.Topology">
-      <HintPath>..\..\..\..\Course\C#\Dotspatial\DotSpatial_Full.1.7\DotSpatial.Topology.dll</HintPath>
+      <HintPath>E:\课程资料\C#\DotSpatial\DotSpatial_Full.1.7\DotSpatial.Topology.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -89,6 +89,24 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Attribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\Create Shape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\File.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\Map Option.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\Projection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\RiverCurverExtract.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

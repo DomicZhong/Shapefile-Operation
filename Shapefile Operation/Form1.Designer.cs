@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlOperations = new System.Windows.Forms.Panel();
+            this.spatialToolStrip1 = new DotSpatial.Controls.SpatialToolStrip();
+            this.map1 = new DotSpatial.Controls.Map();
+            this.legend1 = new DotSpatial.Controls.Legend();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,14 +41,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shapefileOperationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createPointShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.savePointShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.polylineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createPolylineShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.savePolylineShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.polygonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createPloygonShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.savePloygonShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.saveShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapOptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,38 +63,90 @@
             this.projectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.worldToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.asiaNorthAlbersEqualAreaConicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.riverCurveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attributeTableOperationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewAttributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addAColumnInTheAttributeTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteAColumnInTheAttributeTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateAttributeTableInShapefileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAttributeTableToExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAttribute = new System.Windows.Forms.Panel();
             this.spatialStatusStrip1 = new DotSpatial.Controls.SpatialStatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dgvAttributeTable = new System.Windows.Forms.DataGridView();
             this.pnlLengend = new System.Windows.Forms.Panel();
-            this.legend1 = new DotSpatial.Controls.Legend();
             this.pnlMap = new System.Windows.Forms.Panel();
-            this.map1 = new DotSpatial.Controls.Map();
-            this.spatialToolStrip1 = new DotSpatial.Controls.SpatialToolStrip();
+            this.extractToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlOperations.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pnlAttribute.SuspendLayout();
             this.spatialStatusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttributeTable)).BeginInit();
             this.pnlLengend.SuspendLayout();
             this.pnlMap.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlOperations
             // 
+            this.pnlOperations.Controls.Add(this.spatialToolStrip1);
             this.pnlOperations.Controls.Add(this.menuStrip1);
             this.pnlOperations.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlOperations.Location = new System.Drawing.Point(0, 0);
             this.pnlOperations.Name = "pnlOperations";
-            this.pnlOperations.Size = new System.Drawing.Size(862, 32);
+            this.pnlOperations.Size = new System.Drawing.Size(924, 52);
             this.pnlOperations.TabIndex = 0;
+            // 
+            // spatialToolStrip1
+            // 
+            this.spatialToolStrip1.ApplicationManager = null;
+            this.spatialToolStrip1.Location = new System.Drawing.Point(0, 25);
+            this.spatialToolStrip1.Map = this.map1;
+            this.spatialToolStrip1.Name = "spatialToolStrip1";
+            this.spatialToolStrip1.Size = new System.Drawing.Size(924, 25);
+            this.spatialToolStrip1.TabIndex = 1;
+            this.spatialToolStrip1.Text = "spatialToolStrip1";
+            // 
+            // map1
+            // 
+            this.map1.AllowDrop = true;
+            this.map1.AutoSize = true;
+            this.map1.BackColor = System.Drawing.Color.White;
+            this.map1.CollectAfterDraw = false;
+            this.map1.CollisionDetection = false;
+            this.map1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.map1.ExtendBuffer = false;
+            this.map1.FunctionMode = DotSpatial.Controls.FunctionMode.None;
+            this.map1.IsBusy = false;
+            this.map1.IsZoomedToMaxExtent = false;
+            this.map1.Legend = this.legend1;
+            this.map1.Location = new System.Drawing.Point(0, 0);
+            this.map1.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.map1.Name = "map1";
+            this.map1.ProgressHandler = null;
+            this.map1.ProjectionModeDefine = DotSpatial.Controls.ActionMode.Prompt;
+            this.map1.ProjectionModeReproject = DotSpatial.Controls.ActionMode.Prompt;
+            this.map1.RedrawLayersWhileResizing = false;
+            this.map1.SelectionEnabled = true;
+            this.map1.Size = new System.Drawing.Size(747, 455);
+            this.map1.TabIndex = 0;
+            this.map1.GeoMouseMove += new System.EventHandler<DotSpatial.Controls.GeoMouseArgs>(this.map1_GeoMouseMove);
+            this.map1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.map1_MouseDown);
+            // 
+            // legend1
+            // 
+            this.legend1.BackColor = System.Drawing.Color.White;
+            this.legend1.ControlRectangle = new System.Drawing.Rectangle(0, 0, 172, 455);
+            this.legend1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.legend1.DocumentRectangle = new System.Drawing.Rectangle(0, 0, 187, 428);
+            this.legend1.HorizontalScrollEnabled = true;
+            this.legend1.Indentation = 30;
+            this.legend1.IsInitialized = false;
+            this.legend1.Location = new System.Drawing.Point(0, 0);
+            this.legend1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.legend1.MinimumSize = new System.Drawing.Size(5, 5);
+            this.legend1.Name = "legend1";
+            this.legend1.ProgressHandler = null;
+            this.legend1.ResetOnResize = false;
+            this.legend1.SelectionFontColor = System.Drawing.Color.Black;
+            this.legend1.SelectionHighlight = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(238)))), ((int)(((byte)(252)))));
+            this.legend1.Size = new System.Drawing.Size(172, 455);
+            this.legend1.TabIndex = 0;
+            this.legend1.Text = "legend1";
+            this.legend1.VerticalScrollEnabled = true;
             // 
             // menuStrip1
             // 
@@ -103,10 +155,11 @@
             this.shapefileOperationToolStripMenuItem,
             this.mapOptionToolStripMenuItem,
             this.projectionToolStripMenuItem,
+            this.riverCurveToolStripMenuItem,
             this.attributeTableOperationsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(862, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(924, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -152,79 +205,45 @@
             this.shapefileOperationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pointToolStripMenuItem,
             this.polylineToolStripMenuItem,
-            this.polygonToolStripMenuItem});
+            this.polygonToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.saveShapefileToolStripMenuItem});
             this.shapefileOperationToolStripMenuItem.Name = "shapefileOperationToolStripMenuItem";
             this.shapefileOperationToolStripMenuItem.Size = new System.Drawing.Size(98, 21);
             this.shapefileOperationToolStripMenuItem.Text = "Create Shape";
             // 
             // pointToolStripMenuItem
             // 
-            this.pointToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createPointShapefileToolStripMenuItem,
-            this.savePointShapefileToolStripMenuItem});
             this.pointToolStripMenuItem.Name = "pointToolStripMenuItem";
-            this.pointToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.pointToolStripMenuItem.Text = "Point";
-            // 
-            // createPointShapefileToolStripMenuItem
-            // 
-            this.createPointShapefileToolStripMenuItem.Name = "createPointShapefileToolStripMenuItem";
-            this.createPointShapefileToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.createPointShapefileToolStripMenuItem.Text = "Create Point Shapefile";
-            this.createPointShapefileToolStripMenuItem.Click += new System.EventHandler(this.createPointShapefileToolStripMenuItem_Click);
-            // 
-            // savePointShapefileToolStripMenuItem
-            // 
-            this.savePointShapefileToolStripMenuItem.Name = "savePointShapefileToolStripMenuItem";
-            this.savePointShapefileToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.savePointShapefileToolStripMenuItem.Text = "Save Point Shapefile";
-            this.savePointShapefileToolStripMenuItem.Click += new System.EventHandler(this.savePointShapefileToolStripMenuItem_Click);
+            this.pointToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.pointToolStripMenuItem.Text = "Create Point Shapefile";
+            this.pointToolStripMenuItem.Click += new System.EventHandler(this.createPointShapefileToolStripMenuItem_Click);
             // 
             // polylineToolStripMenuItem
             // 
-            this.polylineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createPolylineShapefileToolStripMenuItem,
-            this.savePolylineShapefileToolStripMenuItem});
             this.polylineToolStripMenuItem.Name = "polylineToolStripMenuItem";
-            this.polylineToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.polylineToolStripMenuItem.Text = "Polyline";
-            // 
-            // createPolylineShapefileToolStripMenuItem
-            // 
-            this.createPolylineShapefileToolStripMenuItem.Name = "createPolylineShapefileToolStripMenuItem";
-            this.createPolylineShapefileToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.createPolylineShapefileToolStripMenuItem.Text = "Create Polyline Shapefile";
-            this.createPolylineShapefileToolStripMenuItem.Click += new System.EventHandler(this.createPolylineShapefileToolStripMenuItem_Click);
-            // 
-            // savePolylineShapefileToolStripMenuItem
-            // 
-            this.savePolylineShapefileToolStripMenuItem.Name = "savePolylineShapefileToolStripMenuItem";
-            this.savePolylineShapefileToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.savePolylineShapefileToolStripMenuItem.Text = "Save Polyline Shapefile";
-            this.savePolylineShapefileToolStripMenuItem.Click += new System.EventHandler(this.savePolylineShapefileToolStripMenuItem_Click);
+            this.polylineToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.polylineToolStripMenuItem.Text = "Create Polyline Shapefile";
+            this.polylineToolStripMenuItem.Click += new System.EventHandler(this.createPolylineShapefileToolStripMenuItem_Click);
             // 
             // polygonToolStripMenuItem
             // 
-            this.polygonToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createPloygonShapefileToolStripMenuItem,
-            this.savePloygonShapefileToolStripMenuItem});
             this.polygonToolStripMenuItem.Name = "polygonToolStripMenuItem";
-            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.polygonToolStripMenuItem.Text = "Polygon";
+            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.polygonToolStripMenuItem.Text = "Create Polygon Shapefile";
+            this.polygonToolStripMenuItem.Click += new System.EventHandler(this.createPloygonShapefileToolStripMenuItem_Click);
             // 
-            // createPloygonShapefileToolStripMenuItem
+            // toolStripSeparator3
             // 
-            this.createPloygonShapefileToolStripMenuItem.Name = "createPloygonShapefileToolStripMenuItem";
-            this.createPloygonShapefileToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
-            this.createPloygonShapefileToolStripMenuItem.Text = "Create Ploygon Shapefile";
-            this.createPloygonShapefileToolStripMenuItem.Click += new System.EventHandler(this.createPloygonShapefileToolStripMenuItem_Click);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(219, 6);
             // 
-            // savePloygonShapefileToolStripMenuItem
+            // saveShapefileToolStripMenuItem
             // 
-            this.savePloygonShapefileToolStripMenuItem.Name = "savePloygonShapefileToolStripMenuItem";
-            this.savePloygonShapefileToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
-            this.savePloygonShapefileToolStripMenuItem.Text = "Save Ploygon Shapefile";
-            this.savePloygonShapefileToolStripMenuItem.Click += new System.EventHandler(this.savePloygonShapefileToolStripMenuItem_Click);
+            this.saveShapefileToolStripMenuItem.Name = "saveShapefileToolStripMenuItem";
+            this.saveShapefileToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.saveShapefileToolStripMenuItem.Text = "Save Shapefile";
+            this.saveShapefileToolStripMenuItem.Click += new System.EventHandler(this.saveShapefileToolStripMenuItem_Click);
             // 
             // mapOptionToolStripMenuItem
             // 
@@ -366,181 +385,102 @@
             this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Text = "Asia North Albers EqualArea Conic";
             this.asiaNorthAlbersEqualAreaConicToolStripMenuItem.Click += new System.EventHandler(this.asiaNorthAlbersEqualAreaConicToolStripMenuItem_Click);
             // 
+            // riverCurveToolStripMenuItem
+            // 
+            this.riverCurveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.extractToolStripMenuItem});
+            this.riverCurveToolStripMenuItem.Name = "riverCurveToolStripMenuItem";
+            this.riverCurveToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
+            this.riverCurveToolStripMenuItem.Text = "RiverCurve";
+            this.riverCurveToolStripMenuItem.Click += new System.EventHandler(this.riverCurveToolStripMenuItem_Click);
+            // 
             // attributeTableOperationsToolStripMenuItem
             // 
             this.attributeTableOperationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewAttributeToolStripMenuItem,
-            this.addAColumnInTheAttributeTableToolStripMenuItem,
-            this.deleteAColumnInTheAttributeTableToolStripMenuItem,
-            this.updateAttributeTableInShapefileToolStripMenuItem,
             this.exportAttributeTableToExcelToolStripMenuItem});
             this.attributeTableOperationsToolStripMenuItem.Name = "attributeTableOperationsToolStripMenuItem";
-            this.attributeTableOperationsToolStripMenuItem.Size = new System.Drawing.Size(175, 21);
-            this.attributeTableOperationsToolStripMenuItem.Text = "Attribute Table Operations";
-            // 
-            // viewAttributeToolStripMenuItem
-            // 
-            this.viewAttributeToolStripMenuItem.Name = "viewAttributeToolStripMenuItem";
-            this.viewAttributeToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
-            this.viewAttributeToolStripMenuItem.Text = "View Attribute Table";
-            this.viewAttributeToolStripMenuItem.Click += new System.EventHandler(this.viewAttributeToolStripMenuItem_Click);
-            // 
-            // addAColumnInTheAttributeTableToolStripMenuItem
-            // 
-            this.addAColumnInTheAttributeTableToolStripMenuItem.Name = "addAColumnInTheAttributeTableToolStripMenuItem";
-            this.addAColumnInTheAttributeTableToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
-            this.addAColumnInTheAttributeTableToolStripMenuItem.Text = "Add a column in the attribute table";
-            this.addAColumnInTheAttributeTableToolStripMenuItem.Click += new System.EventHandler(this.addAColumnInTheAttributeTableToolStripMenuItem_Click);
-            // 
-            // deleteAColumnInTheAttributeTableToolStripMenuItem
-            // 
-            this.deleteAColumnInTheAttributeTableToolStripMenuItem.Name = "deleteAColumnInTheAttributeTableToolStripMenuItem";
-            this.deleteAColumnInTheAttributeTableToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
-            this.deleteAColumnInTheAttributeTableToolStripMenuItem.Text = "Delete a column in the attribute table";
-            this.deleteAColumnInTheAttributeTableToolStripMenuItem.Click += new System.EventHandler(this.deleteAColumnInTheAttributeTableToolStripMenuItem_Click);
-            // 
-            // updateAttributeTableInShapefileToolStripMenuItem
-            // 
-            this.updateAttributeTableInShapefileToolStripMenuItem.Name = "updateAttributeTableInShapefileToolStripMenuItem";
-            this.updateAttributeTableInShapefileToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
-            this.updateAttributeTableInShapefileToolStripMenuItem.Text = "Update attribute table in Shapefile";
-            this.updateAttributeTableInShapefileToolStripMenuItem.Click += new System.EventHandler(this.updateAttributeTableInShapefileToolStripMenuItem_Click);
+            this.attributeTableOperationsToolStripMenuItem.Size = new System.Drawing.Size(70, 21);
+            this.attributeTableOperationsToolStripMenuItem.Text = "Attribute";
             // 
             // exportAttributeTableToExcelToolStripMenuItem
             // 
             this.exportAttributeTableToExcelToolStripMenuItem.Name = "exportAttributeTableToExcelToolStripMenuItem";
-            this.exportAttributeTableToExcelToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
+            this.exportAttributeTableToExcelToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.exportAttributeTableToExcelToolStripMenuItem.Text = "Export Attribute table to Excel";
             this.exportAttributeTableToExcelToolStripMenuItem.Click += new System.EventHandler(this.exportAttributeTableToExcelToolStripMenuItem_Click);
             // 
             // pnlAttribute
             // 
             this.pnlAttribute.Controls.Add(this.spatialStatusStrip1);
-            this.pnlAttribute.Controls.Add(this.dgvAttributeTable);
             this.pnlAttribute.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAttribute.Location = new System.Drawing.Point(0, 420);
+            this.pnlAttribute.Location = new System.Drawing.Point(0, 507);
             this.pnlAttribute.Name = "pnlAttribute";
-            this.pnlAttribute.Size = new System.Drawing.Size(862, 100);
+            this.pnlAttribute.Size = new System.Drawing.Size(924, 25);
             this.pnlAttribute.TabIndex = 1;
             // 
             // spatialStatusStrip1
             // 
             this.spatialStatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.spatialStatusStrip1.Location = new System.Drawing.Point(0, 78);
+            this.spatialStatusStrip1.Location = new System.Drawing.Point(0, 3);
             this.spatialStatusStrip1.Name = "spatialStatusStrip1";
             this.spatialStatusStrip1.ProgressBar = null;
             this.spatialStatusStrip1.ProgressLabel = this.toolStripStatusLabel1;
-            this.spatialStatusStrip1.Size = new System.Drawing.Size(862, 22);
+            this.spatialStatusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.spatialStatusStrip1.Size = new System.Drawing.Size(924, 22);
             this.spatialStatusStrip1.TabIndex = 1;
             this.spatialStatusStrip1.Text = "spatialStatusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(119, 17);
             this.toolStripStatusLabel1.Text = "Longitude, Latitude";
-            // 
-            // dgvAttributeTable
-            // 
-            this.dgvAttributeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAttributeTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAttributeTable.Location = new System.Drawing.Point(0, 0);
-            this.dgvAttributeTable.Name = "dgvAttributeTable";
-            this.dgvAttributeTable.RowTemplate.Height = 23;
-            this.dgvAttributeTable.Size = new System.Drawing.Size(862, 100);
-            this.dgvAttributeTable.TabIndex = 0;
             // 
             // pnlLengend
             // 
             this.pnlLengend.Controls.Add(this.legend1);
+            this.pnlLengend.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLengend.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnlLengend.Location = new System.Drawing.Point(0, 60);
-            this.pnlLengend.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.pnlLengend.Location = new System.Drawing.Point(0, 52);
             this.pnlLengend.Name = "pnlLengend";
             this.pnlLengend.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.pnlLengend.Size = new System.Drawing.Size(160, 388);
+            this.pnlLengend.Size = new System.Drawing.Size(177, 455);
             this.pnlLengend.TabIndex = 2;
-            this.pnlLengend.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLengend_Paint);
-            // 
-            // legend1
-            // 
-            this.legend1.BackColor = System.Drawing.Color.White;
-            this.legend1.ControlRectangle = new System.Drawing.Rectangle(0, 0, 155, 388);
-            this.legend1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.legend1.DocumentRectangle = new System.Drawing.Rectangle(0, 0, 187, 428);
-            this.legend1.HorizontalScrollEnabled = true;
-            this.legend1.Indentation = 30;
-            this.legend1.IsInitialized = false;
-            this.legend1.Location = new System.Drawing.Point(0, 0);
-            this.legend1.MinimumSize = new System.Drawing.Size(5, 5);
-            this.legend1.Name = "legend1";
-            this.legend1.ProgressHandler = null;
-            this.legend1.ResetOnResize = false;
-            this.legend1.SelectionFontColor = System.Drawing.Color.Black;
-            this.legend1.SelectionHighlight = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(238)))), ((int)(((byte)(252)))));
-            this.legend1.Size = new System.Drawing.Size(155, 388);
-            this.legend1.TabIndex = 0;
-            this.legend1.Text = "legend1";
-            this.legend1.VerticalScrollEnabled = true;
             // 
             // pnlMap
             // 
             this.pnlMap.Controls.Add(this.map1);
-            this.pnlMap.Location = new System.Drawing.Point(160, 60);
-            this.pnlMap.Margin = new System.Windows.Forms.Padding(3, 20, 25, 3);
+            this.pnlMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMap.Location = new System.Drawing.Point(177, 52);
             this.pnlMap.Name = "pnlMap";
-            this.pnlMap.Size = new System.Drawing.Size(702, 388);
+            this.pnlMap.Size = new System.Drawing.Size(747, 455);
             this.pnlMap.TabIndex = 3;
             // 
-            // map1
+            // extractToolStripMenuItem
             // 
-            this.map1.AllowDrop = true;
-            this.map1.BackColor = System.Drawing.Color.White;
-            this.map1.CollectAfterDraw = false;
-            this.map1.CollisionDetection = false;
-            this.map1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.map1.ExtendBuffer = false;
-            this.map1.FunctionMode = DotSpatial.Controls.FunctionMode.None;
-            this.map1.IsBusy = false;
-            this.map1.IsZoomedToMaxExtent = false;
-            this.map1.Legend = this.legend1;
-            this.map1.Location = new System.Drawing.Point(0, 0);
-            this.map1.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.map1.Name = "map1";
-            this.map1.ProgressHandler = null;
-            this.map1.ProjectionModeDefine = DotSpatial.Controls.ActionMode.Prompt;
-            this.map1.ProjectionModeReproject = DotSpatial.Controls.ActionMode.Prompt;
-            this.map1.RedrawLayersWhileResizing = false;
-            this.map1.SelectionEnabled = true;
-            this.map1.Size = new System.Drawing.Size(702, 388);
-            this.map1.TabIndex = 0;
-            this.map1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.map1_MouseDown);
-            this.map1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.map1_MouseMove);
-            // 
-            // spatialToolStrip1
-            // 
-            this.spatialToolStrip1.ApplicationManager = null;
-            this.spatialToolStrip1.Location = new System.Drawing.Point(0, 32);
-            this.spatialToolStrip1.Map = this.map1;
-            this.spatialToolStrip1.Name = "spatialToolStrip1";
-            this.spatialToolStrip1.Size = new System.Drawing.Size(862, 25);
-            this.spatialToolStrip1.TabIndex = 4;
-            this.spatialToolStrip1.Text = "spatialToolStrip1";
+            this.extractToolStripMenuItem.Name = "extractToolStripMenuItem";
+            this.extractToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.extractToolStripMenuItem.Text = "Extract";
+            this.extractToolStripMenuItem.Click += new System.EventHandler(this.extractToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 520);
-            this.Controls.Add(this.spatialToolStrip1);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(924, 532);
             this.Controls.Add(this.pnlMap);
             this.Controls.Add(this.pnlLengend);
             this.Controls.Add(this.pnlAttribute);
             this.Controls.Add(this.pnlOperations);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Basic Map";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlOperations.ResumeLayout(false);
             this.pnlOperations.PerformLayout();
@@ -550,11 +490,10 @@
             this.pnlAttribute.PerformLayout();
             this.spatialStatusStrip1.ResumeLayout(false);
             this.spatialStatusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttributeTable)).EndInit();
             this.pnlLengend.ResumeLayout(false);
             this.pnlMap.ResumeLayout(false);
+            this.pnlMap.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -571,14 +510,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem shapefileOperationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pointToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createPointShapefileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem savePointShapefileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem polylineToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createPolylineShapefileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem savePolylineShapefileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem polygonToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createPloygonShapefileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem savePloygonShapefileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mapOptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
@@ -589,12 +522,7 @@
         private System.Windows.Forms.ToolStripMenuItem panToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printMapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem attributeTableOperationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewAttributeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addAColumnInTheAttributeTableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteAColumnInTheAttributeTableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateAttributeTableInShapefileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportAttributeTableToExcelToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dgvAttributeTable;
         private DotSpatial.Controls.Legend legend1;
         private DotSpatial.Controls.Map map1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -608,9 +536,13 @@
         private System.Windows.Forms.ToolStripMenuItem worldToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem asiaNorthAlbersEqualAreaConicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem beijing1954ToolStripMenuItem;
-        private DotSpatial.Controls.SpatialToolStrip spatialToolStrip1;
         private DotSpatial.Controls.SpatialStatusStrip spatialStatusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private DotSpatial.Controls.SpatialToolStrip spatialToolStrip1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem saveShapefileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem riverCurveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem extractToolStripMenuItem;
     }
 }
 
