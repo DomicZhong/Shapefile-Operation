@@ -64,6 +64,8 @@
             this.worldToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.asiaNorthAlbersEqualAreaConicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riverCurveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.extractToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attributeTableOperationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAttributeTableToExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAttribute = new System.Windows.Forms.Panel();
@@ -71,7 +73,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.pnlLengend = new System.Windows.Forms.Panel();
             this.pnlMap = new System.Windows.Forms.Panel();
-            this.extractToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewArgTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlOperations.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pnlAttribute.SuspendLayout();
@@ -388,11 +390,26 @@
             // riverCurveToolStripMenuItem
             // 
             this.riverCurveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.extractToolStripMenuItem});
+            this.extractToolStripMenuItem,
+            this.drawToolStripMenuItem,
+            this.viewArgTableToolStripMenuItem});
             this.riverCurveToolStripMenuItem.Name = "riverCurveToolStripMenuItem";
             this.riverCurveToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
             this.riverCurveToolStripMenuItem.Text = "RiverCurve";
-            this.riverCurveToolStripMenuItem.Click += new System.EventHandler(this.riverCurveToolStripMenuItem_Click);
+            // 
+            // extractToolStripMenuItem
+            // 
+            this.extractToolStripMenuItem.Name = "extractToolStripMenuItem";
+            this.extractToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.extractToolStripMenuItem.Text = "Extract";
+            this.extractToolStripMenuItem.Click += new System.EventHandler(this.extractToolStripMenuItem_Click);
+            // 
+            // drawToolStripMenuItem
+            // 
+            this.drawToolStripMenuItem.Name = "drawToolStripMenuItem";
+            this.drawToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.drawToolStripMenuItem.Text = "Draw";
+            this.drawToolStripMenuItem.Click += new System.EventHandler(this.drawToolStripMenuItem_Click);
             // 
             // attributeTableOperationsToolStripMenuItem
             // 
@@ -458,12 +475,12 @@
             this.pnlMap.Size = new System.Drawing.Size(747, 455);
             this.pnlMap.TabIndex = 3;
             // 
-            // extractToolStripMenuItem
+            // viewArgTableToolStripMenuItem
             // 
-            this.extractToolStripMenuItem.Name = "extractToolStripMenuItem";
-            this.extractToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.extractToolStripMenuItem.Text = "Extract";
-            this.extractToolStripMenuItem.Click += new System.EventHandler(this.extractToolStripMenuItem_Click);
+            this.viewArgTableToolStripMenuItem.Name = "viewArgTableToolStripMenuItem";
+            this.viewArgTableToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.viewArgTableToolStripMenuItem.Text = "View Arg Table";
+            this.viewArgTableToolStripMenuItem.Click += new System.EventHandler(this.viewArgTableToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -543,6 +560,8 @@
         private System.Windows.Forms.ToolStripMenuItem saveShapefileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem riverCurveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem extractToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drawToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewArgTableToolStripMenuItem;
     }
 }
 

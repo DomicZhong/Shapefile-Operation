@@ -85,7 +85,7 @@ namespace Shapefile_Operation
                         {
                             //This method is used to convert the screen cordinate to map coordinate
                             //e.location is the mouse click point on the map control
-                            Coordinate coord = map1.PixelToProj(e.Location);
+                            DotSpatial.Topology.Coordinate coord = map1.PixelToProj(e.Location);
 
                             //Create a new point
                             //Input parameter is clicked point coordinate
@@ -119,7 +119,7 @@ namespace Shapefile_Operation
                     {
                         //left click - fill array of coordinates
                         //coordinate of clicked point
-                        Coordinate coord = map1.PixelToProj(e.Location);
+                        DotSpatial.Topology.Coordinate coord = map1.PixelToProj(e.Location);
                         if (linemouseClick)
                         {
                             //first time left click - create empty line feature
@@ -128,7 +128,7 @@ namespace Shapefile_Operation
                                 //Create a new List called lineArray.                          
                                 //This list will store the Coordinates
                                 //We are going to store the mouse click coordinates into this array.
-                                List<Coordinate> lineArray = new List<Coordinate>();
+                                List<DotSpatial.Topology.Coordinate> lineArray = new List<DotSpatial.Topology.Coordinate>();
 
                                 //Create an instance for LineString class.
                                 //We need to pass collection of list coordinates
@@ -171,7 +171,7 @@ namespace Shapefile_Operation
                     if (e.Button == MouseButtons.Left)
                     {
                         //left click - fill array of coordinates
-                        Coordinate coord = map1.PixelToProj(e.Location);
+                        DotSpatial.Topology.Coordinate coord = map1.PixelToProj(e.Location);
 
                         if (polygonmouseClick)
                         {
@@ -183,7 +183,7 @@ namespace Shapefile_Operation
                                 //this list will store the Coordinates
                                 //We are going to store the mouse click coordinates into this array.
 
-                                List<Coordinate> polygonArray = new List<Coordinate>();
+                                List<DotSpatial.Topology.Coordinate> polygonArray = new List<DotSpatial.Topology.Coordinate>();
 
                                 //Create an instance for LinearRing class.
                                 //We pass the polygon List to the constructor of this class
@@ -237,6 +237,7 @@ namespace Shapefile_Operation
         {
             toolStripStatusLabel1.Text = "X:" + e.GeographicLocation.X.ToString() + ",Y:" + e.GeographicLocation.Y.ToString();
         }
+
 
     }
 }

@@ -47,8 +47,6 @@ namespace Shapefile_Operation
             pointLayer.LegendText = "point";
             //Set left mouse click as true
             pointmouseClick = true;
-
-
         }
         /// <summary>
         /// 创建线文件
@@ -131,12 +129,12 @@ namespace Shapefile_Operation
         {
             string file;
             SaveFileDialog dialog = new SaveFileDialog();
+            dialog.AddExtension = true;
             dialog.Title = "请选择面文件路径";
             dialog.Filter = "shp文件(*.*)|*.shp*";
-            dialog.AddExtension = true;
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                file = dialog.FileName;
+                file = dialog.FileName+".shp";
             }
             else
             {
